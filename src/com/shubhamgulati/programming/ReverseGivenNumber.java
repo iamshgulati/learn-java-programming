@@ -12,19 +12,28 @@ private static Scanner scn = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
-		int number;
+		int num;
 		int reverse = 0;
 		
 		System.out.print("Enter the number to be reversed: ");
-		number = scn.nextInt();
+		num = scn.nextInt();
 		
-		while(number != 0) {
-			reverse = reverse*10;
-			reverse = reverse + number%10;
-			number = number/10;
-		}
+		reverse = reverseNumber(num);
 		
 		System.out.println("The reverse is: " + reverse);
+	}
+	
+	public static int reverseNumber(int num) {
+		
+		int rev = 0;
+		
+		while(num != 0) {
+			rev = rev*10;
+			rev = rev + num%10;
+			num = num/10;
+		}
+		
+		return rev;
 	}
 
 }
