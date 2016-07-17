@@ -23,17 +23,17 @@ private static Scanner scn = new Scanner(System.in);
 	
 	public static void fibonacciSequence(int n) {
 		
-		int temp = 0;
 		int first = -1;
 		int second = 1;
+		int next = 1;
 		
 		System.out.println("Fibonacci sequence upto " + n + " terms:");
-		
-		for(int i=1; i<n; i++) {
-			temp = first + second;
+
+		for(int i=0; i<n; i++) {
+			next = first + second;
+			System.out.println(next);
 			first = second;
-			second = temp;
-			System.out.println(temp);
+			second = next;
 		}
 	}
 }
